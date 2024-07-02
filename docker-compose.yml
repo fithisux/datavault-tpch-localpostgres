@@ -17,10 +17,10 @@ services:
     environment:
       POSTGRES_USER: exampleuser
       POSTGRES_PASSWORD: examplepwd
+      POSTGRES_DB: warehouse
       PGDATA: /var/lib/postgresql/data/pgdata
     volumes:
-      - c:/work/setup-tpc-h/pgdata:/var/lib/postgresql/data
-      - c:/work/setup-tpc-h/extradata:/var/lib/postgresql/extradata
+      - ./pgdata:/var/lib/postgresql/data
     ports:
       - 5432:5432
 
